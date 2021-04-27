@@ -7,7 +7,7 @@
       <div class="navbar-nav">
         <a class="nav-link" href="{{ route('listado') }}">Listado</a>
         <a class="nav-link" href="{{ route('nuevo') }}">Nuevo</a>
-        <a class="nav-link" href="#">Buscar</a>
+        <a class="nav-link" href="{{ route('buscar') }}">Buscar</a>
       </div>
     </div>
   </nav>

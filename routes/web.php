@@ -25,6 +25,12 @@ Route::post('save', 'HeroesController@store')->name('save');
 
 Route::get('/listado', 'HeroesController@getAll')->name('listado');
 
+Route::get('/buscar', function(){
+    return view('heroes.buscarheroe');
+})->name('buscar');
+
+Route::get('/mostrar', 'heroesController@buscarNombre')->name('mostrar');
+
 Route::delete('/eliminar/{id}', 'heroesController@destroy')->name('eliminar');
 
 Route::get('/editar/{id}','heroesController@editForm')->name('editform');

@@ -22,6 +22,15 @@ class HeroesController extends Controller
 
     }
 
+    public function buscarNombre(Request $request){
+
+       $nombre = $request->nombre;     
+
+        $heroes = Heroe::where('nombre', 'LIKE', "%$nombre%")->get();
+        return view('heroes.listado', compact('heroes'));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *
